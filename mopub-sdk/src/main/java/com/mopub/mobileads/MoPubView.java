@@ -69,6 +69,7 @@ public class MoPubView extends FrameLayout {
     public static final String HOST = "ads.mopub.com";
     public static final String HOST_FOR_TESTING = "testing.ads.mopub.com";
     public static final String AD_HANDLER = "/m/ad";
+    public static boolean TEST_MODE = false;
     public static final int DEFAULT_LOCATION_PRECISION = 6;
 
     protected AdViewController mAdViewController;
@@ -403,6 +404,7 @@ public class MoPubView extends FrameLayout {
     }
 
     public void setTesting(boolean testing) {
+        TEST_MODE = testing;
         if (mAdViewController != null) mAdViewController.setTesting(testing);
     }
 
